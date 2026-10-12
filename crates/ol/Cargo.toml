@@ -1,0 +1,24 @@
+[package]
+name = "ol"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Unprivileged container mount manager, OverlayFS layers, and sandbox isolation boundaries."
+
+[[bin]]
+name = "ol"
+path = "src/main.rs"
+
+[lints]
+workspace = true
+
+[dependencies]
+ol-domain = { path = "../ol-domain" }
+anyhow.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
